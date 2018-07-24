@@ -1,0 +1,2 @@
+﻿factory
+	里面的所有具体操作全由state 和mannger和engine管理

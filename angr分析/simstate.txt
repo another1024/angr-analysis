@@ -1,0 +1,4 @@
+﻿simstate（对于状态进行转换约束更变操作的部件）
+	调用solve进行约束
+		satisfiable(**kwargs)检查约束
+	调用step(**kwargs)执行一个步骤
