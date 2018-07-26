@@ -1,0 +1,8 @@
+_analyze（forward_analysis.py）
+	  self._pre_analysis()
+	创建job
+	 self._analysis_core_baremetal
+	分析job
+	获取下一个job状态
+		_process_job_and_get_successors
+			get_successors（具体分析，扫描IR）
