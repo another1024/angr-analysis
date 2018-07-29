@@ -1,0 +1,42 @@
+|                             文件                             |        类名        |                             功能                             |
+| :----------------------------------------------------------: | :----------------: | :----------------------------------------------------------: |
+| [project.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/project.py) |      project       |                    加载二进制文件和初始化                    |
+| [factory.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/factory.py) | AngrObjectFactory  |                        所有操作的接口                        |
+| [sim_state.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/sim_state.py) |      SimState      |                  进行状态和内存寄存器的控制                  |
+| [sim_manager.py](https://github.com/angr/angr/blob/master/angr/sim_manager.py) | SimulationManager  |                        进行执行与控制                        |
+| [sim_procedure.py](https://github.com/angr/angr/blob/master/angr/sim_procedure.py) |   sim_procedure    |                   允许用户自己编写控制的类                   |
+| [block.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/block.py) |       block        |                          代表块的类                          |
+| [analyses](https://github.com/another1024/angr-analysis/tree/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/analyses) |   analyses文件夹   |                         进行CFG分析                          |
+| [forward_analysis.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/analyses/forward_analysis.py) |  ForwardAnalysis   |                     进行cfg分析的具体类                      |
+| [veritesting.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/analyses/veritesting.py) |    Veritesting     |                  Veritesting 动静态结合优化                  |
+| [cfg](https://github.com/another1024/angr-analysis/tree/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/analyses/cfg) | analyses下的文件夹 |                      包含了所有分析方法                      |
+| [cfg_base.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/analyses/cfg/cfg_base.py) |      CFGbase       |                           cfg基类                            |
+| [cfg_fast.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/analyses/cfg/cfg_fast.py) |      CFGfast       |                       cfgfast分析方法                        |
+| [engines](https://github.com/another1024/angr-analysis/tree/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/engines) |   engines文件夹    |                          引擎文件夹                          |
+| [hub.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/engines/hub.py) |     EngineHub      |                       引擎运行，初始化                       |
+| [engine.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/engines/engine.py) |     simengine      |                           引擎父类                           |
+| [vex](https://github.com/another1024/angr-analysis/tree/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/engines/vex) | engines下的文件夹  |                        simvex的文件夹                        |
+| [engine.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/engines/vex/engine.py) |    SimEngineVEX    |                        真正的引擎执行                        |
+| [irop.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/engines/vex/irop.py) |        irop        |                       IR语言转换的地方                       |
+| [statements](https://github.com/another1024/angr-analysis/tree/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/engines/vex/statements) |   vex下的文件夹    |                       进行执行的文件夹                       |
+| [__init__.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/engines/vex/statements/__init__.py) |         无         | 一个类似于虚拟机的文件，statements里面的所有文件用于虚拟机操作base.py是基类 |
+| [exploration_techniques](https://github.com/another1024/angr-analysis/tree/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/exploration_techniques) | 插件文件夹 | 插件存放 |
+| [crash_monitor.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/exploration_techniques/crash_monitor.py) | CrashMonitor | driller崩溃检测 |
+| [driller_core.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/exploration_techniques/driller_core.py) | DrillerCore | 进行driller控制 |
+| [explorer.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/exploration_techniques/explorer.py) | Explorer | 进行约束地址的控制 |
+| [tracer.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/exploration_techniques/tracer.py) | Tracer | 路径追踪，driller和分析用 |
+| [veritesting.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/exploration_techniques/veritesting.py) | Veritesting | 动静态结合符号执行插件 |
+| [state_plugins](https://github.com/another1024/angr-analysis/tree/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/state_plugins) | state的插件文件夹 | 包括memory，solve之类的 |
+| [storage](https://github.com/another1024/angr-analysis/tree/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/storage) | storage文件夹 | 内存符号化文件夹 |
+| [surveyors](https://github.com/another1024/angr-analysis/tree/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/surveyors) | surveyors文件夹 | 现在只在analysis中使用，旧版simmanage |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+

@@ -6,3 +6,4 @@ _analyze（forward_analysis.py）
 	获取下一个job状态
 		_process_job_and_get_successors （cfg里面的cfgfast.py）
 			get_successors（具体分析，扫描IR）
+四种分析方法：强制执行，符号执行，后向切片，集值分析
