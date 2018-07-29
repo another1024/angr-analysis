@@ -279,7 +279,9 @@ class SimState(PluginHub, ana.Storable):
     def _inspect(self, *args, **kwargs):
         if self.has_plugin('inspect'):
             self.inspect.action(*args, **kwargs)
-
+    '''
+    调用检查插件
+    '''
     def _inspect_getattr(self, attr, default_value):
         if self.has_plugin('inspect'):
             if hasattr(self.inspect, attr):
@@ -295,12 +297,16 @@ class SimState(PluginHub, ana.Storable):
         #l.debug("Adding plugin %s of type %s", name, plugin.__class__.__name__)
         self._set_plugin_state(plugin, inhibit_init=inhibit_init)
         return super(SimState, self).register_plugin(name, plugin)
-
+    '''
+    注册插件
+    '''
     def _init_plugin(self, plugin_cls):
         plugin = plugin_cls()
         self._set_plugin_state(plugin)
         return plugin
-
+    '''
+    初始化插件
+    '''
     def _set_plugin_state(self, plugin, inhibit_init=False):
         plugin.set_state(self)
         if plugin.STRONGREF_STATE:

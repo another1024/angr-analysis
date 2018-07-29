@@ -36,8 +36,4 @@
 | [operations.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/claripy/operations.py) | operations | 用来注册操作的类 |
 | [driller_main.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/driller/driller_main.py) | driller | 用来执行driller的类 |
 | [local_callback.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/driller/local_callback.py) | 无 | afl用来调用driller的类 |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
 
