@@ -463,7 +463,7 @@ class SimMemory(SimStatePlugin):
               inspect=True, priv=None, disable_actions=False):
         '''
         进行约束转换的地方
-        最终调用simstate的memory插件
+        
         '''
         """
         Stores content into memory.
@@ -555,7 +555,7 @@ class SimMemory(SimStatePlugin):
 
         request = MemoryStoreRequest(addr_e, data=data_e, size=size_e, condition=condition_e, endness=endness)
         try:
-            self._store(request)
+            self._store(request)#进行转换（重构了，具体请跳到symbolic_memory.py中，_store_fully_concrete）
         except SimSegfaultError as e:
             e.original_addr = addr_e
             raise

@@ -767,6 +767,9 @@ class SimSymbolicMemory(SimMemory): #pylint:disable=abstract-method
         self.mem.store_memory_object(mo)
 
     def _store_fully_concrete(self, address, size, data, endness, condition):
+    	'''
+    	求解操作
+    	'''
         if type(size) not in (int, long):
             size = self.state.solver.eval(size)
         if size < data.length//self.state.arch.byte_width:
