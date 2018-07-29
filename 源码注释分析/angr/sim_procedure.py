@@ -170,7 +170,7 @@ class SimProcedure(object):
                     sim_args,
                     inst.kwargs)
             r = getattr(inst, inst.run_func)(*sim_args, **inst.kwargs)
-
+            #用户的钩子
         if inst.returns and inst.is_function and not inst.inhibit_autoret:
             inst.ret(r)
 
