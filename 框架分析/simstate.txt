@@ -1,3 +1,3 @@
 ﻿simstate（对于状态进行转换约束更变操作的部件）
-	初始化插件memroy，resister
+	初始化插件memroy，resister（PluginHub类添加，插件本身是SimStatePlugin类）
 	调用solve进行约束

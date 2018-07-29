@@ -39,6 +39,10 @@
 
 ### 对storage文件夹的memory进行注释
 
+### state_plugins
+ 
+	继承plugin.py里面的SimStatePlugin
+
 ## angr常用指令与源码的索引
 
 ## angr文件列表说明（暂未完成）

@@ -14,7 +14,7 @@ from .misc.ux import deprecated
 from .misc.plugins import PluginHub, PluginPreset
 from .sim_state_options import SimStateOptions
 '''
-对状态进行控制的函数，主要调用solve插件（state_plugins里面）插件父类在pligins.py文件夹里
+对状态进行控制的函数，主要调用solve插件（state_plugins里面）插件父类在pligins.py文件夹里（SimStatePlugin类）
 部分简单属性：
 ip 
 (self.regs.ip)
@@ -41,6 +41,9 @@ merge_counter = itertools.count()
 
 # pylint: disable=not-callable
 class SimState(PluginHub, ana.Storable):
+    '''
+    PluginHub是插件类，加载插件时候用到了的父类
+    '''
     """
     The SimState represents the state of a program, including its memory, registers, and so forth.
 
