@@ -66,6 +66,9 @@ class AngrObjectFactory(object):
         return self.project.engines.successors(*args, **kwargs)
 
     def blank_state(self, **kwargs):
+    	'''
+    	空状态
+    	'''
         """
         Returns a mostly-uninitialized state object. All parameters are optional.
 
@@ -108,6 +111,9 @@ class AngrObjectFactory(object):
         return self.project.simos.state_entry(**kwargs)
 
     def full_init_state(self, **kwargs):
+    	'''
+    	driller状态
+    	'''
         """
         Very much like :meth:`entry_state()`, except that instead of starting execution at the program entry point,
         execution begins at a special SimProcedure that plays the role of the dynamic loader, calling each of the
@@ -131,6 +137,9 @@ class AngrObjectFactory(object):
         return self.project.simos.state_full_init(**kwargs)
 
     def call_state(self, addr, *args, **kwargs):
+    	'''
+    	call调用状态
+    	'''
         """
         Returns a state object initialized to the start of a given function, as if it were called with given parameters.
 
