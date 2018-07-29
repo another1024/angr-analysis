@@ -320,6 +320,9 @@ class SimulationManager(ana.Storable, ImmutabilityMixin):
         :rtype:             SimulationManager
         """
         l.info("Stepping %s of %s", stash, self)
+        '''
+        状态集合stash
+        '''
         # 8<----------------- Compatibility layer -----------------
         if n is not None or until is not None:
             if once('simgr_step_n_until'):
@@ -332,7 +335,9 @@ class SimulationManager(ana.Storable, ImmutabilityMixin):
         bucket = defaultdict(list)
 
         for state in self._fetch_states(stash=stash):
-
+        '''
+        获取每个状态
+        '''
             goto = self.filter(state, filter_func)
             if isinstance(goto, tuple):
                 goto, state = goto
@@ -347,6 +352,9 @@ class SimulationManager(ana.Storable, ImmutabilityMixin):
 
             pre_errored = len(self._errored)
             successors = self.step_state(state, successor_func, **run_args)
+            '''
+            状态单步前进
+            '''
             if not any(successors.itervalues()) and len(self._errored) == pre_errored:
                 bucket['deadended'].append(state)
                 continue

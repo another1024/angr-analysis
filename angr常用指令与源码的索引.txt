@@ -4,3 +4,4 @@ project.factory.entry_state()     						¶ÔÓ¦ factory.pyÀïÃæµÄ entry_state×´Ì¬×ª»
  simulation = project.factory.simgr(initial_state)         				¶ÔÓ¦ factory.pyÀïÃæµÄº¯Êı·µ»Øsimmanage.pyÀïÃæµÄsimmanageÀà
 simulation.explore(find=is_successful, avoid=should_abort) £¨.step£©£¨.run£©                       ¶ÔÓ¦simmanage.pyÀïÃæµÄexplore£¨step£©£¨run£©
 proj.analyses.CFGFast()							¶ÔÓ¦ analysisÀïÃæµÄforward_analysis.pyÎÄ¼şµÄ_analysisº¯Êı
+driller                                                    						¶ÔÓ¦aflµ÷ÓÃdriller£¬driller_callback£¨ÔÚlocal_callback.pyÀïÃæ

@@ -487,6 +487,9 @@ class SimEngineVEX(SimEngine):
             thumb = 0
 
         # phase 3: check cache
+        '''
+        检查cache是否存在，用于插件转化的irsb
+        '''
         cache_key = None
         if use_cache:
             cache_key = (addr, insn_bytes, size, num_inst, thumb, opt_level, strict_block_end)
