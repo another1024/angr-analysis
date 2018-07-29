@@ -33,6 +33,8 @@ def translate_stmt(stmt, state):
         像这个self.state.registers.store(self.stmt.offset, data.expr, action=a)
         store（storage/文件夹下的memory）
         最终到了state_plugins里面的memory，然后调用求解器
+        state_plugins/scratch.py的store_tmp解决临时变量
+        storage/memory.py的store写入约束
         '''
         return s
     else:

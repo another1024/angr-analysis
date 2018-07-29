@@ -27,7 +27,8 @@
 | [tracer.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/exploration_techniques/tracer.py) | Tracer | 路径追踪，driller和分析用 |
 | [veritesting.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/exploration_techniques/veritesting.py) | Veritesting | 动静态结合符号执行插件 |
 | [state_plugins](https://github.com/another1024/angr-analysis/tree/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/state_plugins) | state的插件文件夹 | 包括memory，solve之类的 |
-| [storage](https://github.com/another1024/angr-analysis/tree/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/storage) | storage文件夹 | 内存符号化文件夹 |
+| [scratch.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/state_plugins/scratch.py) | SimStateScratch | 写入临时约束store_tmp |
+| [storage](https://github.com/another1024/angr-analysis/tree/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/storage) | storage文件夹 | 内存符号化文件夹memory.py的  store |
 | [surveyors](https://github.com/another1024/angr-analysis/tree/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/surveyors) | surveyors文件夹 | 现在只在analysis中使用，旧版simmanage |
 | [cle](https://github.com/another1024/angr-analysis/tree/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/cle) | cle文件夹 | cle加载模块 |
 | [loader.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/cle/loader.py) | Loader | cle的加载二进制的文件 |
