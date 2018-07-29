@@ -30,6 +30,7 @@
 | [storage](https://github.com/another1024/angr-analysis/tree/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/storage) | storage文件夹 | 内存符号化文件夹 |
 | [surveyors](https://github.com/another1024/angr-analysis/tree/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/angr/surveyors) | surveyors文件夹 | 现在只在analysis中使用，旧版simmanage |
 | [loader.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/cle/loader.py) | Loader | cle的加载二进制的文件 |
+| [backends](https://github.com/another1024/angr-analysis/tree/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/cle/backends) | cle下的backends文件夹 | 存放可执行文件分析的文件夹 |
 | [__init__.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/claripy/__init__.py) | 无 | claripy下用来初始化求解器的文件 |
 | [ast](https://github.com/another1024/angr-analysis/tree/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/claripy/ast) | ast文件夹 | 语法分析树 |
 | [operations.py](https://github.com/another1024/angr-analysis/blob/master/%E6%BA%90%E7%A0%81%E6%B3%A8%E9%87%8A%E5%88%86%E6%9E%90/claripy/operations.py) | operations | 用来注册操作的类 |
