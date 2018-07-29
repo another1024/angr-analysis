@@ -1,12 +1,15 @@
+
+state_plugins/preconstrainer.py AFL输入文件转换为angr输入文件
+
+afl调用driller
+	driller_callback（在local_callback.py里面）
+		_run_driller
+			main
+				drill_generator（生成文件写入与输入错误导致的超时处理，在driller_main.py中）
+					_drill_input（初始化trace，angr，执行angr）
+
+调用的插件：
 Tracer  路径转换
 CrashMonitor 检查崩溃
 DrillerCore进行符合afl的路径转换
 Oppologist 啥也没干
-state_plugins/preconstrainer.py AFL输入文件转换为angr输入文件
-
-afl调用driller
-	driller_callback
-		_run_driller
-			main
-				drill_generator（生成文件写入与输入错误导致的超时处理）
-					_drill_input（初始化trace，angr，执行angr）

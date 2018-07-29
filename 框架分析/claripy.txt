@@ -4,12 +4,12 @@
 	返回BV类
 
 	BV类
-	注册操作
-		operations.op
-			将操作转换为simp类
-			注册
-				_handle_annotations
-					添加simp类
+注册操作（operations.py中）
+	operations.op
+		将操作转换为simp类
+		注册
+			_handle_annotations
+				添加simp类
 
 
 

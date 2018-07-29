@@ -1,8 +1,8 @@
 engine
 	engines.successors
 		engine.check
-		engine.process（simvex继承simengine）
-		调用父类最终执行_process
+		engine.process（simvex继承simengine）（engine.py中）
+		调用父类最终执行_process（vex/engine.py中）
 			irsb进行IR转换（lift函数调用irsb包）		
 			处理irsb
 				_handle_irsb
@@ -11,10 +11,10 @@ engine
 					（此函数接收初始状态并标记并处理pyvex.IRStmts列表
      					   它使用最终状态，最后一个imark和一个SimIRStmts列表来注释请求）
 					 执行程序
-						translate_stmt（init）
-							process（base）
+						translate_stmt（init）（statement/init.py中）
+							process（base.py中）
 							多次重载。
 							调用
-								store（storage/文件夹下的memory）
+								store（storage/文件夹下的memory.py中）
 	
 ast转换在state_plugins/下sim_action_object.py

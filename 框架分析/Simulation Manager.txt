@@ -1,9 +1,9 @@
-Simulation Manager
+﻿Simulation Manager
 	step
 		step_state
 			successors
-				factory.successors
-					engines.successors
+				factory.successors（factory.py中）
+					engines.successors（engine/hub.py中）
 	explore
 		use_technique
 		添加tech （explorer）（exploration_techniques/explorer.py）
