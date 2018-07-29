@@ -209,6 +209,9 @@ class SimState(PluginHub, ana.Storable):
     def se(self):
         # TODO: Deprecate this
         return self.get_plugin('solver')
+        '''
+        返回solve插件，eval中使用
+        '''
 
 
     @property
