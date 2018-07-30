@@ -711,9 +711,7 @@ class SimSymbolicMemory(SimMemory): #pylint:disable=abstract-method
                 return req
             else:
                 raise
-        '''
-        计算新地址的地方
-        '''
+
         if type(req.addr) not in (int, long) and req.addr.symbolic:
             conditional_constraint = self.state.solver.Or(*[ req.addr == a for a in req.actual_addresses ])
             if (conditional_constraint.symbolic or  # if the constraint is symbolic
@@ -738,6 +736,9 @@ class SimSymbolicMemory(SimMemory): #pylint:disable=abstract-method
         #
         # store it!!!
         #
+        '''
+        计算新地址的地方
+        '''
         req.stored_values = []
         if (self.category == 'mem' and options.SIMPLIFY_MEMORY_WRITES in self.state.options) or \
            (self.category == 'reg' and options.SIMPLIFY_REGISTER_WRITES in self.state.options):
