@@ -2,6 +2,9 @@ from claripy.fp import FSORT_FLOAT, FSORT_DOUBLE
 from pyvex.const import get_type_size
 
 def translate_irconst(state, c):
+	'''
+	BV化的地方
+	'''
     size = get_type_size(c.type)
     if isinstance(c.value, (int, long)):
         return state.se.BVV(c.value, size)

@@ -42,6 +42,10 @@ class SimIRStmt(object):
     def _translate_expr(self, expr):
         """Translates an IRExpr into a SimIRExpr."""
         e = translate_expr(expr, self.state)
+        '''
+        angr\engines\vex\expressions转换为BV
+        '''
+
         self._record_expr(e)
         return e
 
