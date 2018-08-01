@@ -1762,7 +1762,9 @@ class CFGFast(ForwardAnalysis, CFGBase):    # pylint: disable=abstract-method
         """
 
         addr, function_addr, cfg_node, irsb = self._generate_cfgnode(cfg_job, current_func_addr)
-
+        '''
+        获取块节点信息
+        '''
         # Add edges going to this node in function graphs
         cfg_job.apply_function_edges(self, clear=True)
 
@@ -1776,6 +1778,9 @@ class CFGFast(ForwardAnalysis, CFGBase):    # pylint: disable=abstract-method
         self._graph_add_edge(cfg_node, cfg_job.src_node, cfg_job.jumpkind, cfg_job.src_ins_addr,
                              cfg_job.src_stmt_idx
                              )
+        '''
+        向graph中添加节点
+        '''
         self._function_add_node(cfg_node, function_addr)
 
         if self.functions.get_by_addr(current_func_addr).returning is not True:
@@ -1805,7 +1810,9 @@ class CFGFast(ForwardAnalysis, CFGBase):    # pylint: disable=abstract-method
         # Get all possible successors
         irsb_next, jumpkind = irsb.next, irsb.jumpkind
         successors = [ ]
-
+        '''
+        这下面的是job的successors和node的不同
+        '''
         last_ins_addr = None
         ins_addr = addr
         if irsb.statements:
@@ -1863,7 +1870,9 @@ class CFGFast(ForwardAnalysis, CFGBase):    # pylint: disable=abstract-method
         :return:                    a list of CFGJobs
         :rtype:                     list
         """
-
+        '''
+        创建下个节点所使用的job类
+        '''
         if type(target) is pyvex.IRExpr.Const:  # pylint: disable=unidiomatic-typecheck
             target_addr = target.con.value
         elif type(target) in (pyvex.IRConst.U32, pyvex.IRConst.U64):  # pylint: disable=unidiomatic-typecheck

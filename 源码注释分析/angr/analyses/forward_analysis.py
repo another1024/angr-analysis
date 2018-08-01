@@ -700,14 +700,14 @@ class ForwardAnalysis(object):
         job = job_info.job
 
         successors = self._get_successors(job)
-
+        '''
+        CFGfast中具体实现
+        '''
         all_new_jobs = [ ]
 
         for successor in successors:
             new_jobs = self._handle_successor(job, successor, successors)
-            '''
-            CFGfast中具体实现
-            '''
+
             if new_jobs:
                 all_new_jobs.extend(new_jobs)
 

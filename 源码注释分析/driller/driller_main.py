@@ -152,6 +152,9 @@ class Driller(object):
         l.debug("Input is %r.", self.input)
         #下面进行路径转换
         while simgr.active and simgr.one_active.globals['bb_cnt'] < len(r.trace):
+            """
+            进行路径长度限制
+            """
             simgr.step()
 
             # Check here to see if a crash has been found.
