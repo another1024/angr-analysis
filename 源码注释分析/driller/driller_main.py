@@ -141,7 +141,7 @@ class Driller(object):
         #函数在simmanage中
         '''
         加载了四个插件
-        Tracer  路径转换
+        Tracer  路径追踪
         CrashMonitor 检查崩溃
         DrillerCore进行符合afl的路径转换
         Oppologist 啥也没干
